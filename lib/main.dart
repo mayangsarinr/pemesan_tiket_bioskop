@@ -61,7 +61,7 @@ class CinemaGoApp extends StatelessWidget {
         // AppRoutes.seatSelection: (context) => const SeatSelectionScreen(),
         // AppRoutes.booking: (context) => const BookingScreen(),
         // AppRoutes.bookingHistory: (context) => const BookingHistoryScreen(),
-        // AppRoutes.profile: (context) => const ProfileScreen(),
+        AppRoutes.profile: (context) => const ProfileScreen(),
       },
     );
   }
