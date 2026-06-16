@@ -55,13 +55,44 @@ class CinemaGoApp extends StatelessWidget {
         AppRoutes.signUp: (context) => const SignUpScreen(),
         AppRoutes.home: (context) => const HomeScreen(),
         AppRoutes.movieDetail: (context) => const MovieDetailScreen(),
-
-        // Aktifkan kalau file screen sudah benar-benar ada
-        // AppRoutes.schedule: (context) => const ScheduleScreen(),
-        // AppRoutes.seatSelection: (context) => const SeatSelectionScreen(),
-        // AppRoutes.booking: (context) => const BookingScreen(),
-        // AppRoutes.bookingHistory: (context) => const BookingHistoryScreen(),
         AppRoutes.profile: (context) => const ProfileScreen(),
+      },
+      onGenerateRoute: (settings) {
+        switch (settings.name) {
+          case AppRoutes.schedule:
+            final args = settings.arguments as Map<String, dynamic>?;
+            return MaterialPageRoute(
+              builder: (_) => ScheduleScreen(
+                movieTitle: args?['title'] ?? args?['movieTitle'] ?? '',
+              ),
+            );
+          case AppRoutes.seatSelection:
+            final args = settings.arguments as Map<String, dynamic>?;
+            return MaterialPageRoute(
+              builder: (_) => SeatSelectionScreen(
+                movieTitle: args?['movieTitle'] ?? '',
+                date: args?['date'] ?? '',
+                time: args?['time'] ?? '',
+              ),
+            );
+          case AppRoutes.booking:
+            final args = settings.arguments as Map<String, dynamic>?;
+            return MaterialPageRoute(
+              builder: (_) => BookingScreen(
+                movieTitle: args?['movieTitle'] ?? '',
+                date: args?['date'] ?? '',
+                time: args?['time'] ?? '',
+                seats: List<String>.from(args?['seats'] ?? <String>[]),
+                total: args?['total'] ?? 0,
+              ),
+            );
+          case AppRoutes.bookingHistory:
+            return MaterialPageRoute(
+              builder: (_) => const BookingHistoryScreen(),
+            );
+          default:
+            return null;
+        }
       },
     );
   }
