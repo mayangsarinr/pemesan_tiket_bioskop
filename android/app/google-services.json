@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "409647643043",
+    "project_id": "cinema-go-bbf06",
+    "storage_bucket": "cinema-go-bbf06.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409647643043:android:ecc7e5947dac059fed0216",
+        "android_client_info": {
+          "package_name": "com.example.pemesan_tiket_bioskop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwKm-3uL-Ih7qU-kPTvDaevVnxL6yV4jw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
