@@ -9,4 +9,5 @@ class AppRoutes {
   static const String booking = '/booking';
   static const String bookingHistory = '/booking-history';
   static const String profile = '/profile';
+  static const String favorites = '/favorites';
 }

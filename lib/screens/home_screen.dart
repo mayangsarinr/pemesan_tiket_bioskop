@@ -23,6 +23,10 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pushNamed(context, AppRoutes.bookingHistory),
           ),
           IconButton(
+            icon: const Icon(Icons.favorite, color: AppColors.lightBlue),
+            onPressed: () => Navigator.pushNamed(context, AppRoutes.favorites),
+          ),
+          IconButton(
             icon: const Icon(Icons.person, color: AppColors.lightBlue),
             onPressed: () => Navigator.pushNamed(context, AppRoutes.profile),
           ),

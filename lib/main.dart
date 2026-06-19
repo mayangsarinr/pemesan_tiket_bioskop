@@ -17,6 +17,7 @@ import 'screens/seat_selection_screen.dart';
 import 'screens/booking_screen.dart';
 import 'screens/booking_history_screen.dart';
 import 'screens/profile_screen.dart';
+import 'screens/favorite_movie_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -55,6 +56,7 @@ class CinemaGoApp extends StatelessWidget {
         AppRoutes.signUp: (context) => const SignUpScreen(),
         AppRoutes.home: (context) => const HomeScreen(),
         AppRoutes.movieDetail: (context) => const MovieDetailScreen(),
+        AppRoutes.favorites: (context) => const FavoriteMovieScreen(),
         AppRoutes.profile: (context) => const ProfileScreen(),
       },
       onGenerateRoute: (settings) {
