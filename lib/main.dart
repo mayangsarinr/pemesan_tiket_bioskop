@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'utils/app_colors.dart';
 import 'utils/app_routes.dart';
+import 'utils/app_constants.dart';
+import 'seed_movies.dart';
 import 'screens/splash_screen.dart';
 import 'screens/sign_in_screen.dart';
 import 'screens/sign_up_screen.dart';
@@ -17,9 +20,15 @@ import 'screens/favorite_movie_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await initializeDateFormatting('id_ID', null);
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  await SeedMovies.seedMovies();
+
   runApp(const CinemaGoApp());
 }
 
