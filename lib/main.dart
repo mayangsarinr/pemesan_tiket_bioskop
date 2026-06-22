@@ -27,7 +27,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  await SeedMovies.seedMovies();
+  //await SeedMovies.seedMovies();
 
   runApp(const CinemaGoApp());
 }
