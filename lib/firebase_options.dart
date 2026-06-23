@@ -31,7 +31,7 @@ class DefaultFirebaseOptions {
 
   // CONFIG UNTUK ANDROID
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA4ZAMtl0DaqWzFzpAl5WemDSv_9BeRT4g',
+    apiKey: 'AIzaSyBwKm-3uL-Ih7qU-kPTvDaevVnxL6yV4jw',
     appId: '1:409647643043:android:ecc7e5947dac059fed0216',
     messagingSenderId: '409647643043',
     projectId: 'cinema-go-bbf06',
